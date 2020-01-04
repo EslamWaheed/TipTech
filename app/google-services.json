@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "492068709462",
+    "firebase_url": "https://tip-tech-android.firebaseio.com",
+    "project_id": "tip-tech-android",
+    "storage_bucket": "tip-tech-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492068709462:android:a78e5c0b0704101eecc7f7",
+        "android_client_info": {
+          "package_name": "com.tiptech.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492068709462-k150b84il8g9mpgvv433l89bklal6q6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiptech.android",
+            "certificate_hash": "bd75ed2dcd6d9f9f0d6845f69938b457faa5ee35"
+          }
+        },
+        {
+          "client_id": "492068709462-qpesop6u7mmj51rl3nn86b3l8vlugdf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3hhNx2osFSwKwmKFu5uR-WLEckHx86CM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492068709462-qpesop6u7mmj51rl3nn86b3l8vlugdf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
