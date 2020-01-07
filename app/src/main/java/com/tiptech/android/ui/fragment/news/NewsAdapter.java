@@ -14,6 +14,7 @@ import com.tiptech.android.R;
 import com.tiptech.android.di.module.GlideApp;
 import com.tiptech.android.model.news.Datum;
 import com.tiptech.android.utils.AppConstants;
+import com.tiptech.android.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,7 @@ class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_news, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_news_big, viewGroup, false);
         return new ViewHolder(view);
     }
 
@@ -51,6 +52,13 @@ class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         viewHolder.textView_news_title.setText(datum.getTitle());
         viewHolder.textView_news_description.setText(datum.getDescription());
         viewHolder.textView_news_date.setText(datum.getDateNew());
+        viewHolder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (datum.getLink() != null && !datum.getLink().equals(""))
+                    CommonUtils.openCustomTab(context, datum.getLink());
+            }
+        });
     }
 
     @Override

@@ -15,6 +15,7 @@ import com.tiptech.android.R;
 import com.tiptech.android.di.module.GlideApp;
 import com.tiptech.android.model.courses.Datum;
 import com.tiptech.android.utils.AppConstants;
+import com.tiptech.android.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,13 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
         viewHolder.textView_courses_description.setText(datum.getDescription());
         viewHolder.ratingBar_courses_rating.setRating(datum.getEvaluation());
         viewHolder.textView_courses_source.setText(datum.getNameSite());
+        viewHolder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (datum.getLink() != null && !datum.getLink().equals(""))
+                    CommonUtils.openCustomTab(context, datum.getLink());
+            }
+        });
     }
 
     @Override

@@ -1,12 +1,12 @@
 
 package com.tiptech.android.model.quiz;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Datum implements Serializable
-{
+import java.io.Serializable;
+
+public class Datum implements Serializable {
 
     @SerializedName("Text")
     @Expose
@@ -20,6 +20,9 @@ public class Datum implements Serializable
     @SerializedName("Id")
     @Expose
     private long id;
+    @SerializedName("Link")
+    @Expose
+    private String link;
     private final static long serialVersionUID = -1871960028577394406L;
 
     public String getText() {
@@ -54,4 +57,11 @@ public class Datum implements Serializable
         this.id = id;
     }
 
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
 }

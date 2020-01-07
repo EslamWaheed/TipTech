@@ -53,7 +53,8 @@ class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder> {
         viewHolder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CommonUtils.openCustomTab(context, datum.getDescription());
+                if (datum.getLink() != null && !datum.getLink().equals(""))
+                    CommonUtils.openCustomTab(context, datum.getLink());
             }
         });
     }
